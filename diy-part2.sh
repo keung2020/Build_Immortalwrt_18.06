@@ -20,7 +20,7 @@ sed -i '/uci commit system/i\uci set system.@system[0].hostname='BrianRT'' packa
 sed -i "s/ImmortalWrt 18.06 /BrianLuo build $(TZ=UTC-8 date "+%Y.%m.%d") @ ImmortalWrt 18.06 /g" package/lean/default-settings/files/zzz-default-settings
 
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
-sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
+# sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 # Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
