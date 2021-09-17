@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt NewWifi_D2
+name: Build ImmortalWrt NewWifi_D2
 
 on:
   repository_dispatch:
