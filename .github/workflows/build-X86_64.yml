@@ -8,7 +8,7 @@
 # Description: Build Immortalwrt using GitHub Actions
 #
 
-name: Build Immortalwrt
+name: Build Immortalwrt X86_64
 
 on:
   repository_dispatch:
