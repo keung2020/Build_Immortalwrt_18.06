@@ -16,7 +16,8 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 # Modify hostname
 sed -i 's/hostname='ImmortalWrt'/hostname='QinWrt'/g' package/base-files/files/bin/config_generate
 
-sed -i 's/DEPENDS:=+wpa_supplicant/DEPENDS:= @(PACKAGE_wpa_supplicant||PACKAGE_wpad)/g'/feeds/packages/net/ieee8021xclient/Makefile
+#sed -i 's/DEPENDS:=+wpa_supplicant/DEPENDS:=+wpa-supplicant/g'/feeds/packages/net/ieee8021xclient/Makefile
+#sed -i 's/DEPENDS:=+wpa_supplicant/DEPENDS:= @(PACKAGE_wpa_supplicant||PACKAGE_wpad)/g'/feeds/packages/net/ieee8021xclient/Makefile
 
 # Modify default theme
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
