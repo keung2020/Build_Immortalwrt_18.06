@@ -16,7 +16,7 @@ sed -i 's/192.168.1.1/192.168.168.1/g' package/base-files/files/bin/config_gener
 # 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
 sed -i 's/hostname='ImmortalWrt'/hostname='BrianWrt'/g' package/base-files/files/bin/config_generate
 
-sed -i 's/DISTRIB_DESCRIPTION='%D %V %C'/DISTRIB_DESCRIPTION='$(date +%Y-%m-%d-%H:%M) %D %V %C'/g' /etc/openwrt_release
+sed -i 's/OpenWrt /BrianLuo build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g' /etc/openwrt_release
 
 sed -i 's/DEPENDS:=+wpa_supplicant/DEPENDS:=+wpa-supplicant/g' feeds/packages/net/ieee8021xclient/Makefile
 
