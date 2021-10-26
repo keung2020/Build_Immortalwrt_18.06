@@ -27,3 +27,6 @@ sed -i 's/DEPENDS:=+wpa_supplicant/DEPENDS:=+wpa-supplicant/g' feeds/packages/ne
 
 # Modify default theme
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+
+# Modify Laug
+sed -i 's/luci.main.lang=auto/luci.main.lang=zh_cn/g' package/emortal/default-settings/files/zzz-default-settings
