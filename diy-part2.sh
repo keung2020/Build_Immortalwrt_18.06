@@ -17,7 +17,10 @@ sed -i 's/192.168.1.1/192.168.168.1/g' package/base-files/files/bin/config_gener
 sed -i 's/hostname='ImmortalWrt'/hostname='BrianWrt'/g' package/base-files/files/bin/config_generate
 
 # Modify the version number
-sed -i "s/OpenWrt /BrianLuo build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/emortal/default-settings/files/zzz-default-settings
+# echo "sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release" >> package/emortal/default-settings/files/zzz-default-settings
+# echo "echo "DISTRIB_REVISION='R$(TZ=UTC-8 date "+%Y.%m.%d")'" >> /etc/openwrt_release" >> package/emortal/default-settings/files/zzz-default-settings
+echo "sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release" >> package/emortal/default-settings/files/zzz-default-settings
+echo "echo "DISTRIB_DESCRIPTION='BrianLuo build $(TZ=UTC-8 date "+%Y.%m.%d") @ ImmortalWrt 18.06) '" >> /etc/openwrt_release" >> package/emortal/default-settings/files/zzz-default-settings
 
 # Fix supplicant name error
 sed -i 's/DEPENDS:=+wpa_supplicant/DEPENDS:=+wpa-supplicant/g' feeds/packages/net/ieee8021xclient/Makefile
