@@ -26,13 +26,7 @@ sed -i 's/auto/zh_cn/g' package/emortal/default-settings/files/zzz-default-setti
 sed -i 's/ImmortalWrt/BrianWRT@$(TZ=UTC-8 date "+%Y.%m.%d")/g' package/base-files/files/bin/config_generate
 
 # Modify the version number
-sed -i "/distfeeds.conf/a\echo "DISTRIB_DESCRIPTION='BrianLuo build $(TZ=UTC-8 date "+%Y.%m.%d") @ %D %V %C'" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
-sed -i "/distfeeds.conf/a\sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
+sed -i "/distfeeds.conf/a\sed -i 's/DISTRIB_DESCRIPTION='%D %V %C'/DISTRIB_DESCRIPTION='%D %V @build $(TZ=UTC-8 date "+%Y.%m.%d")'/g' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
+# sed -i "/distfeeds.conf/a\sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 # sed -i "/distfeeds.conf/a\echo "DISTRIB_REVISION='R$(TZ=UTC-8 date "+%Y.%m.%d")'" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 # sed -i "/distfeeds.conf/a\sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
-
-# echo "sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release" >> package/emortal/default-settings/files/zzz-default-settings
-# echo "echo "DISTRIB_REVISION='R$(TZ=UTC-8 date "+%Y.%m.%d")'" >> /etc/openwrt_release" >> package/emortal/default-settings/files/zzz-default-settings
-# echo "sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release" >> package/emortal/default-settings/files/zzz-default-settings
-# echo "echo "DISTRIB_DESCRIPTION='BrianLuo build $(TZ=UTC-8 date "+%Y.%m.%d") @ ImmortalWrt 18.06) '" >> /etc/openwrt_release" >> package/emortal/default-settings/files/zzz-default-settings
-
