@@ -23,10 +23,10 @@ sed -i 's/DEPENDS:=+wpa_supplicant/DEPENDS:=+wpa-supplicant/g' feeds/packages/ne
 sed -i 's/auto/zh_cn/g' package/emortal/default-settings/files/zzz-default-settings
 
 # 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i 's/ImmortalWrt/BrianWRT_$(TZ=UTC-8 date "+%Y%m%d")/g' package/base-files/files/bin/config_generate
+sed -i 's/ImmortalWrt/BrianRT_$(TZ=UTC-8 date "+%Y%m%d")/g' package/base-files/files/bin/config_generate
 
 # Modify the version number
-sed -i "/distfeeds.conf/a\sed -i 's/DISTRIB_DESCRIPTION='%D %V %C'/DISTRIB_DESCRIPTION='%D %V build $(TZ=UTC-8 date "+%Y%m%d")'/g' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
+sed -i "/distfeeds.conf/a\sed -i 's/DISTRIB_DESCRIPTION='%D %V %C'/DISTRIB_DESCRIPTION='%D %V build$(TZ=UTC-8 date "+%Y%m%d")'/g' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 # sed -i "/distfeeds.conf/a\sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 # sed -i "/distfeeds.conf/a\echo "DISTRIB_REVISION='R$(TZ=UTC-8 date "+%Y.%m.%d")'" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 # sed -i "/distfeeds.conf/a\sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
