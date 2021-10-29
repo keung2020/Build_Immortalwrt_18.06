@@ -26,8 +26,13 @@ sed -i 's/auto/zh_cn/g' package/emortal/default-settings/files/zzz-default-setti
 sed -i 's/ImmortalWrt/BrianRT_$(TZ=UTC-8 date "+%Y%m%d")/g' package/base-files/files/bin/config_generate
 
 # 增加个性名字
-sed -i "s/OpenWrt /BrianLuo Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ ImmortalWrt /g" package/emortal/default-settings/files/zzz-default-settings         
- 
+sed '24a\sed -i '/DISTRIB_RELEASE/d' /etc/openwrt_release' package/emortal/default-settings/files/zzz-default-settings
+sed '25a\echo "DISTRIB_RELEASE='SNAPSHOT'" >> /etc/openwrt_release' package/emortal/default-settings/files/zzz-default-settings
+sed '26a\sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release' package/emortal/default-settings/files/zzz-default-settings
+sed '27a\echo "DISTRIB_REVISION='18.06 by immortalwrt'" >> /etc/openwrt_release' package/emortal/default-settings/files/zzz-default-settings
+sed '28a\sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release' package/emortal/default-settings/files/zzz-default-settings
+sed '29a\echo "DISTRIB_DESCRIPTION='BrianLuo Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ ImmortalWrt '" >> /etc/openwrt_release' package/emortal/default-settings/files/zzz-default-settings
+
 # 设置密码为空
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/emortal/default-settings/files/zzz-default-settings                                                            
 
