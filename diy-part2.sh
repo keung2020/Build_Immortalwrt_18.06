@@ -25,10 +25,16 @@ sed -i 's/auto/zh_cn/g' package/emortal/default-settings/files/zzz-default-setti
 # 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
 sed -i 's/ImmortalWrt/BrianRT_$(TZ=UTC-8 date "+%Y%m%d")/g' package/base-files/files/bin/config_generate
 
+# 增加个性名字
+sed -i "s/OpenWrt /BrianLuo Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ ImmortalWrt /g" package/emortal/default-settings/files/zzz-default-settings         
+ 
+# 设置密码为空
+sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/emortal/default-settings/files/zzz-default-settings                                                            
+
 # Modify the version number
-sed -i "/distfeeds.conf/a\echo "DISTRIB_DESCRIPTION='ImmortalWrt_18.06@Build$(TZ=UTC-8 date "+%Y%m%d") '" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
-sed -i "/distfeeds.conf/a\sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
-sed -i 's/DISTRIB_DESCRIPTION=ImmortalWrt_18.06@Build$(TZ=UTC-8 date "+%Y%m%d") /DISTRIB_DESCRIPTION='ImmortalWrt_18.06@Build$(TZ=UTC-8 date "+%Y%m%d") '/g' package/emortal/default-settings/files/zzz-default-settings
+# sed -i "/distfeeds.conf/a\echo "DISTRIB_DESCRIPTION='ImmortalWrt_18.06@Build$(TZ=UTC-8 date "+%Y%m%d") '" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
+# sed -i "/distfeeds.conf/a\sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
+# sed -i 's/DISTRIB_DESCRIPTION=ImmortalWrt_18.06@Build$(TZ=UTC-8 date "+%Y%m%d") /DISTRIB_DESCRIPTION='ImmortalWrt_18.06@Build$(TZ=UTC-8 date "+%Y%m%d") '/g' package/emortal/default-settings/files/zzz-default-settings
 # sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release
 # echo "DISTRIB_REVISION='R21.10.1'" >> /etc/openwrt_release
 # sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
