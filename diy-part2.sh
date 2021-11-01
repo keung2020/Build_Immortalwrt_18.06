@@ -30,7 +30,7 @@ sed -i 's/ImmortalWrt/BrianRT_$(TZ=UTC-8 date "+%Y%m%d")/g' package/base-files/f
 # sed -i "24a\sed -i \'/DISTRIB_RELEASE/d\' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 # sed -i "25a\echo \"DISTRIB_RELEASE=\'SNAPSHOT\'\" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 sed -i "24a\sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
-sed -i "25a\echo \"DISTRIB_REVISION=\'18.06 by Immortalwrt\'\" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
+sed -i "25a\echo \"DISTRIB_REVISION=\'18.06 by Openwrt\'\" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 sed -i "26a\sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 sed -i "27a\echo \"DISTRIB_DESCRIPTION=\'BrianLuo Compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ ImmortalWrt \'\" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 
