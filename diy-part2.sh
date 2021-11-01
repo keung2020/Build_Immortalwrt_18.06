@@ -17,6 +17,7 @@ sed -i 's/192.168.1.1/172.18.18.40/g' package/base-files/files/bin/config_genera
 sed -i 's/DEPENDS:=+wpa_supplicant/DEPENDS:=+wpa-supplicant/g' feeds/packages/net/ieee8021xclient/Makefile
 
 # Modify default theme
+sed -i "3a\uci set luci.main.mediaurlbase=/luci-static/material" package/emortal/default-settings/files/zzz-default-settings
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Modify Laug
@@ -26,8 +27,8 @@ sed -i 's/auto/zh_cn/g' package/emortal/default-settings/files/zzz-default-setti
 sed -i 's/ImmortalWrt/BrianRT_$(TZ=UTC-8 date "+%Y%m%d")/g' package/base-files/files/bin/config_generate
 
 # 增加个性名字
-# sed -i '24a\sed -i '/DISTRIB_RELEASE/d' /etc/openwrt_release' package/emortal/default-settings/files/zzz-default-settings
-# sed -i '25a\echo "DISTRIB_RELEASE='SNAPSHOT'" >> /etc/openwrt_release' package/emortal/default-settings/files/zzz-default-settings
+# sed -i "24a\sed -i \'/DISTRIB_RELEASE/d\' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
+# sed -i "25a\echo \"DISTRIB_RELEASE=\'SNAPSHOT\'\" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 sed -i "24a\sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 sed -i "25a\echo \"DISTRIB_REVISION=\'18.06 by Immortalwrt\'\" >> /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
 sed -i "26a\sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release" package/emortal/default-settings/files/zzz-default-settings
