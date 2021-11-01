@@ -11,7 +11,7 @@
 #
 
 # 修改openwrt登陆地址,把下面的192.168.2.2修改成你想要的就可以了
-sed -i 's/192.168.1.1/172.18.18.40/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.168.1/g' package/base-files/files/bin/config_generate
 
 # Fix supplicant name error
 sed -i 's/DEPENDS:=+wpa_supplicant/DEPENDS:=+wpa-supplicant/g' feeds/packages/net/ieee8021xclient/Makefile
