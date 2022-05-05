@@ -24,7 +24,7 @@ sed -i "3a\uci set luci.main.mediaurlbase=/luci-static/material" package/emortal
 sed -i 's/auto/zh_cn/g' package/emortal/default-settings/files/99-default-settings
 
 # 修改主机名字，把ImmortalWrt修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i 's/ImmortalWrt/QingRT_$(TZ=UTC-8 date "+%Y%m%d")/g' package/base-files/files/bin/config_generate
+sed -i 's/ImmortalWrt/QinRT_$(TZ=UTC-8 date "+%Y%m%d")/g' package/base-files/files/bin/config_generate
 
 # 增加个性名字
 # sed -i "24a\sed -i \'/DISTRIB_RELEASE/d\' /etc/openwrt_release" package/emortal/default-settings/files/99-default-settings
