@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/1715173329/imoutowrt
   REPO_BRANCH: 1806-ipq806x-nss
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: newifi_d2.config
+  CONFIG_FILE: ea8500.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part5.sh
   UPLOAD_BIN_DIR: true
