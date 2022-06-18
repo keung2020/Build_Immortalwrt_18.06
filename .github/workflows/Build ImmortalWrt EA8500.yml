@@ -8,7 +8,7 @@
 # Description: Build Immortalwrt using GitHub Actions
 #
 
-name: Build Immortalwrt EA8500_NSS
+name: Build Immortalwrt EA8500
 
 on:
   repository_dispatch:
@@ -20,12 +20,12 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/1715173329/imoutowrt
-  REPO_BRANCH: 1806-ipq806x-nss
+  REPO_URL: https://github.com/immortalwrt/immortalwrt
+  REPO_BRANCH: openwrt-18.06
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ea8500.config
   DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: diy-part5.sh
+  DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -151,7 +151,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::ImmortalWrt_18.06_EA8500_NSS_$(date +"%Y.%m.%d-%H%M")"
+        echo "::set-output name=release_tag::ImmortalWrt_18.06_EA8500_$(date +"%Y.%m.%d-%H%M")"
         touch release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
