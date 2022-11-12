@@ -19,4 +19,4 @@
 #echo 'src-git ikoolproxy https://github.com/yaof2/luci-app-ikoolproxy' >>feeds.conf.default
 echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' >>feeds.conf.default
 #git clone https://github.com/xiaorouji/openwrt-passwall2.git package/openwrt-passwall2
-#git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
+git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
