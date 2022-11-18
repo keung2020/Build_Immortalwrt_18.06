@@ -157,7 +157,7 @@ jobs:
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "status=success" >>$GITHUB_OUTPUT
     - name: Upload firmware to release
-      uses: softprops/action-gh-release@v1
+      uses: keung2020/action-gh-release@1.0
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
