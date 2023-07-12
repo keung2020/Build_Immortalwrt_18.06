@@ -41,4 +41,6 @@ rm -rf feeds/luci/applications/luci-app-wrtbwmon
 rm -rf feeds/luci/applications/luci-app-xlnetacc
 rm -rf feeds/luci/applications/luci-app-xunlei
 rm -rf feeds/luci/applications/luci-theme-argon
+rm -rf feeds/packages/net/naiveproxy
+rm -rf feeds/packages/net/xray-core
 ./scripts/feeds update -a
