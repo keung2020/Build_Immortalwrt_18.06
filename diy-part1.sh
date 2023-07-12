@@ -21,5 +21,3 @@
 #git clone https://github.com/xiaorouji/openwrt-passwall2.git package/openwrt-passwall2
 #git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
-git clone https://github.com/klzgrad/naiveproxy.git feeds/naiveproxy
-git clone https://github.com/XTLS/Xray-core.git feeds/xray-core
