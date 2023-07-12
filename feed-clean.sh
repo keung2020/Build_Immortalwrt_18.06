@@ -48,7 +48,7 @@ rm -rf feeds/packages/net/brook
 rm -rf feeds/packages/net/chinadns-ng
 rm -rf feeds/packages/net/dns2socks
 rm -rf feeds/packages/net/dns2tcp
-rm -rf feeds/packages/net/hysteria
+#rm -rf feeds/packages/net/hysteria
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/shadowsocks-rust
 ./scripts/feeds update -a
