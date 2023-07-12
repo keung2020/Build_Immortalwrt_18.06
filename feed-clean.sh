@@ -43,4 +43,10 @@ rm -rf feeds/luci/applications/luci-app-xunlei
 rm -rf feeds/luci/applications/luci-theme-argon
 rm -rf feeds/packages/net/naiveproxy
 rm -rf feeds/packages/net/xray-core
+git clone https://github.com/klzgrad/naiveproxy.git feeds/naiveproxy
+git clone https://github.com/XTLS/Xray-core.git feeds/xray-core
+cp -rf feeds/xray-core feeds/smpackage/xray-core
+cp -rf feeds/naiveproxy feeds/smpackage/naiveproxy
+rm -rf feeds/xray-core
+rm -rf feeds/naiveproxy
 ./scripts/feeds update -a
