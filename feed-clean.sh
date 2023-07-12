@@ -51,10 +51,4 @@ rm -rf feeds/packages/net/dns2tcp
 rm -rf feeds/packages/net/hysteria
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/shadowsocks-rust
-git clone https://github.com/klzgrad/naiveproxy.git feeds/naiveproxy
-git clone https://github.com/XTLS/Xray-core.git feeds/xray-core
-cp -rf feeds/xray-core feeds/smpackage/xray-core
-cp -rf feeds/naiveproxy feeds/smpackage/naiveproxy
-rm -rf feeds/xray-core
-rm -rf feeds/naiveproxy
 ./scripts/feeds update -a
