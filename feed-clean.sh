@@ -2,9 +2,6 @@
 
 # Description: OpenWrt DIY script run after Update feeds
 
-#!/bin/bash
-
-# Description: OpenWrt DIY script run after Update feeds
 
 #Delete duplicate file
 rm -rf feeds/luci/applications/luci-app-aliddns
