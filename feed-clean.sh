@@ -27,7 +27,7 @@ rm -rf feeds/luci/applications/luci-app-sms-tool
 rm -rf feeds/luci/applications/luci-app-socat
 rm -rf feeds/luci/applications/luci-app-softethervpn
 rm -rf feeds/luci/applications/luci-app-ssr-mudb-server
-rm -rf feeds/luci/applications/luci-app-ssr-plus
+#rm -rf feeds/luci/applications/luci-app-ssr-plus
 rm -rf feeds/luci/applications/luci-app-syncthing
 rm -rf feeds/luci/applications/luci-app-sysuh3c
 rm -rf feeds/luci/applications/luci-app-timecontrol
