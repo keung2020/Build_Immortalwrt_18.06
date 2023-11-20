@@ -54,4 +54,6 @@ rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/shadowsocks-rust
 rm -rf feeds/packages/net/frp
 rm -rf feeds/packages/net/mosdns
+rm -rf feeds/packages/net/frp
+svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/net/frp feeds/packages/net/frp
 ./scripts/feeds update -a
